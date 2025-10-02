@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trello Application</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-left">
+      <span class="app-icon">📱</span>
+      <img src="https://upload.wikimedia.org/wikipedia/en/8/8c/Trello_logo.svg" 
+           alt="Trello" class="logo">
+    </div>
+
+    <div class="navbar-center">
+      <input type="text" placeholder="Search..." class="search">
+    </div>
+
+    <!-- Right side -->
+    <div class="navbar-right">
+      <label for="offcanvas-toggle" class="trial-btn">14 days left</label>
+      <span class="icon">🔔</span>
+      <span class="icon">ℹ️</span>
+      <span class="login">Login</span>
+    </div>
+  </nav>
+
+  <!-- Offcanvas  -->
+  <input type="checkbox" id="offcanvas-toggle" hidden>
+  <div class="offcanvas">
+    <div class="offcanvas-content">
+      <label for="offcanvas-toggle" class="close-btn">✖</label>
+      <h2>Premium Trial</h2>
+      <p>You have 14 days left in your premium trial.  
+         Unlock features like advanced checklists, unlimited power-ups,  
+         and priority support!</p>
+      <button>Upgrade Now</button>
+    </div>
+  </div>
+
+  <!-- Board Header -->
+  <div class="board-header">
+    <div class="header-left">
+      <span class="board-icon">📋</span>
+      <span class="board-title" id="boardTitle">My Trello Board</span>
+      <input type="text" id="titleInput" class="title-input" style="display:none;">
+    </div>
+
+    <div class="header-center">
+    </div>
+
+    <div class="header-right">
+      <span class="icon-button star-btn" id="starBtn">☆</span>
+      <span class="icon-button share-btn">🔗</span>
+      <div class="dropdown automation-dropdown">
+        <span class="icon-button auto-btn">⚙️</span>
+        <div class="dropdown-content">
+          <button class="auto-btn-opt">Premium Feature</button>
+          <button class="auto-btn-opt">Another Option</button>
+        </div>
+      </div>
+    </div>
+  </div>
+   
+  <!-- Board -->
+  <div class="board">
+  </div>
+
+  <!-- Permanent add list button -->
+  <div class="add-list">
+    <button id="addListBtn">Add another list</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
